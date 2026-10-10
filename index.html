@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#140c1c">
+  <title>Dhaka to Bagerhat - Pixel Bus</title>
+  <meta name="description" content="A pixel-art bus journey from Dhaka to Bagerhat over the Padma Bridge.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@500;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <span class="route">DHAKA <i>&#9654;</i> BAGERHAT</span>
+      <span class="next" id="next">NEXT: BHANGA JN</span>
+    </header>
+
+    <section class="stage" id="stage">
+      <canvas id="c" aria-label="Pixel art bus travelling from Dhaka to Bagerhat"></canvas>
+
+      <div id="banner" class="banner" aria-live="polite">
+        <div class="banner-tag" id="banner-tag">ARRIVED</div>
+        <div class="banner-name" id="banner-name">DHAKA</div>
+        <div class="banner-bn" id="banner-bn">ঢাকা</div>
+        <div class="banner-fact" id="banner-fact"></div>
+      </div>
+
+      <div id="start" class="overlay">
+        <div class="overlay-box">
+          <div class="overlay-title">INTERCITY<br>PIXEL BUS</div>
+          <div class="overlay-route">DHAKA &rarr; BAGERHAT</div>
+          <button id="start-btn" class="btn big">&#9654; TAP TO START</button>
+          <div class="overlay-note">sound on for the full ride</div>
+        </div>
+      </div>
+
+      <div id="end" class="overlay hidden">
+        <div class="overlay-box">
+          <div class="overlay-title">BAGERHAT<br>REACHED</div>
+          <div class="overlay-route">Journey complete</div>
+          <button id="again-btn" class="btn big">&#8635; RIDE AGAIN</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="progress" aria-hidden="true">
+      <div class="track">
+        <div id="bar"></div>
+        <div id="dots"></div>
+        <div id="marker"></div>
+      </div>
+      <div id="labels"></div>
+    </section>
+
+    <nav class="controls">
+      <button id="btn-pause" class="btn">PAUSE</button>
+      <button id="btn-speed" class="btn">1x</button>
+      <button id="btn-next" class="btn">NEXT</button>
+      <button id="btn-music" class="btn">&#9834; ON</button>
+    </nav>
+
+    <footer class="credit">&#9834; Bagdhara &ndash; Bus Sohokari</footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
